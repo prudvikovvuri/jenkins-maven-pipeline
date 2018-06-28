@@ -10,6 +10,19 @@
 
 	<name>springboot</name>
 	<description>Project for Spring Boot Jenkins</description>
+<distributionManagement>
+	<repository>
+		<id>deploymentRepo</id>
+		<name>Internal Releases</name>
+		<url>http://<nexus-ip>:8081/repository/maven-releases/</url>
+	</repository>
+ 
+	<snapshotRepository>
+		<id>deploymentRepo</id>
+		<name>Internal Releases</name>
+		<url>http://<nexus-ip>:8081/repository/maven-snapshots/</url>
+	</snapshotRepository>
+</distributionManagement>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
